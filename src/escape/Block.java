@@ -1,22 +1,20 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Block class:
+handles block display and user input in editting the grid 
+
  */
 package escape;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.ArrayList;
 import javax.swing.JComponent;
 
-/**
- *
- * @author arnaud
- */
 public class Block extends JComponent {
     private int length;
-    private boolean alive = true;
-    private Color aliveColor;
+    protected boolean alive = true;
+    protected Color aliveColor;
     private Color deadColor;
+    
     
     public Block(int length) {
         super();
@@ -58,7 +56,7 @@ public class Block extends JComponent {
     public boolean alive() {
         return alive;
     }
-    private void onClick() {
+    protected void onClick() {
         alive = !alive;
         repaint();
     }
